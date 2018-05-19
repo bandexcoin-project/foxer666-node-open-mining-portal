@@ -82,7 +82,8 @@ module.exports = function () {
                         },
                         function (clients) {
                             newPool.attachMiners(clients);
-                        }
+                        },
+                        proxyPorts // <<<
                     );
                     proxySwitch[switchName].currentPool = newCoin;
 
