@@ -54,7 +54,8 @@ module.exports = function () {
                 _this.logger.silly('incoming coinswitch message');
                 let componentStr = `Proxy Switch [:${(parseInt(forkId) + 1)}]`;
 
-                let logger = loggerFactory.getLogger(componentStr, coin);
+                //let logger = loggerFactory.getLogger(componentStr, coin);
+                let logger = loggerFactory.getLogger(componentStr, message.coin.toLowerCase());
 
                 var switchName = message.switchName;
 
